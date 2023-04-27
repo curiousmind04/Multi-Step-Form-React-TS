@@ -31,6 +31,11 @@
 }
 
 body {
+  background-image: url("/images/bg-sidebar-mobile.svg");
+  background-repeat: no-repeat;
+  background-position: top;
+  background-size: contain;
+  background-color: hsl(217, 100%, 97%);
   font: 400 1rem "Ubuntu", sans-serif;
   min-height: 100vh;
 }

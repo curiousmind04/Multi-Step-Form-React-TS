@@ -1,0 +1,32 @@
+.steps {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  padding: 2rem 0;
+}
+
+.step {
+  color: hsl(0, 0%, 100%);
+  font-weight: 500;
+  border: 1px solid hsl(0, 0%, 100%);
+  border-radius: 50%;
+  height: 2rem;
+  aspect-ratio: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.current {
+  background-color: hsl(206, 94%, 87%);
+  color: hsl(213, 96%, 18%);
+  font-weight: 500;
+  border: none;
+  border-radius: 50%;
+  height: 2rem;
+  aspect-ratio: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
