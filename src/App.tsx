@@ -1,16 +1,20 @@
-import Provider from "./store/Provider";
-
 import One from "./components/One";
 import Steps from "./components/Steps";
 import Two from "./components/Two";
+import Three from "./components/Three";
+import Four from "./components/Four";
+import Five from "./components/Five";
 
 const App = () => {
   return (
-    <Provider>
+    <>
       <Steps />
       <One />
       <Two />
-    </Provider>
+      <Three />
+      <Four />
+      <Five />
+    </>
   );
 };
 

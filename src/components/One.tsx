@@ -15,7 +15,7 @@ const One = () => {
   const phoneInputRef = useRef<HTMLInputElement>(null);
 
   const validateName = (name: string): boolean => {
-    return name?.trim().length >= 3;
+    return name?.trim().length >= 2;
   };
 
   const validateEmail = (email: string) => {
@@ -27,6 +27,7 @@ const One = () => {
   };
 
   const validatePhone = (phone: string): boolean => {
+    phone = phone.replace(/\s+/g, "");
     return phone?.trim().length >= 10;
   };
 
@@ -62,7 +63,16 @@ const One = () => {
         <div className={classes.container}>
           <h1>Personal info</h1>
           <p>Please provide your name, email address, and phone number.</p>
-          <label htmlFor="name">Name</label>
+          <div className={classes.message}>
+            <label htmlFor="name">Name</label>
+            {!nameValidity && !nameInputRef.current?.value.trim().length && (
+              <span>This field is required</span>
+            )}
+            {!nameValidity &&
+              nameInputRef.current?.value.trim().length === 1 && (
+                <span>2 chars minimum</span>
+              )}
+          </div>
           <input
             type="text"
             id="name"
@@ -74,7 +84,16 @@ const One = () => {
               setNameValidity(true);
             }}
           />
-          <label htmlFor="email">Email Adress</label>
+          <div className={classes.message}>
+            <label htmlFor="email">Email Adress</label>
+            {!emailValidity && !emailInputRef.current?.value.trim().length && (
+              <span>This field is required</span>
+            )}
+            {!emailValidity &&
+              emailInputRef.current?.value.trim().length !== 0 && (
+                <span>Incorrect format</span>
+              )}
+          </div>
           <input
             type="email"
             id="email"
@@ -86,7 +105,16 @@ const One = () => {
               setEmailValidity(true);
             }}
           />
-          <label htmlFor="phone">Phone Number</label>
+          <div className={classes.message}>
+            <label htmlFor="phone">Phone Number</label>
+            {!phoneValidity && !phoneInputRef.current?.value.trim().length && (
+              <span>This field is required</span>
+            )}
+            {!phoneValidity &&
+              phoneInputRef.current?.value.trim().length !== 0 && (
+                <span>Invalid input</span>
+              )}
+          </div>
           <input
             type="text"
             id="phone"

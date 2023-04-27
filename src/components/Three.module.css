@@ -1,0 +1,172 @@
+.container {
+  background-color: hsl(0, 0%, 100%);
+  margin: 0 1rem;
+  padding: 2rem 1.5rem 2rem 1.5rem;
+  border-radius: 0.6rem;
+  margin-bottom: 5rem;
+}
+
+.container h1 {
+  color: hsl(213, 96%, 18%);
+  margin-bottom: 0.8rem;
+}
+
+.container > p {
+  color: hsl(231, 11%, 63%);
+  font-weight: 500;
+  margin-bottom: 1.2rem;
+  line-height: 1.4rem;
+}
+
+.container > button,
+.container > label {
+  background-color: transparent;
+  width: 100%;
+  padding: 1rem;
+  margin-top: 0.8rem;
+  gap: 1rem;
+  outline: none;
+  border: 1px solid hsl(231, 22%, 77%);
+  border-radius: 0.6rem;
+  font: inherit;
+  font-size: 1rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+}
+
+.container > .chosen {
+  background-color: hsl(217, 100%, 97%);
+  border: 1px solid hsl(243, 100%, 62%);
+}
+
+.left {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 1rem;
+}
+
+/* checkmark start */
+
+.checkmark {
+  display: block;
+  position: relative;
+  height: 21px;
+  width: 21px;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  border: 1px solid hsl(231, 22%, 77%);
+  border-radius: 0.3rem;
+  overflow: hidden;
+}
+
+.checkmark input {
+  position: absolute;
+  opacity: 0;
+  height: 0;
+  width: 0;
+  pointer-events: none;
+}
+
+.check {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 19px;
+  width: 19px;
+}
+
+.checkmark input:checked ~ .check {
+  background-color: hsl(243, 100%, 62%);
+}
+
+.checkmark input:checked ~ img {
+  display: block;
+}
+
+.checkmark img {
+  display: none;
+  position: absolute;
+  top: calc(50% - 4.5px);
+  left: calc(50% - 6px);
+  z-index: 1;
+}
+
+/* checkmark end */
+
+.details {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 0.3rem;
+}
+
+.details h2 {
+  color: hsl(213, 96%, 18%);
+  font-size: 0.9rem;
+}
+
+.details p {
+  color: hsl(231, 11%, 63%);
+  font-size: 0.75rem;
+}
+
+.container > button > p,
+.container > label > p {
+  color: hsl(243, 100%, 62%);
+  font-size: 0.75rem;
+  font-weight: 500;
+}
+
+.bottom {
+  background-color: hsl(0, 0%, 100%);
+  width: 100%;
+  padding: 1rem;
+  display: flex;
+  justify-content: space-between;
+}
+
+.bottom > :first-child {
+  background-color: transparent;
+  color: hsl(231, 11%, 63%);
+  font: inherit;
+  font-size: 0.9rem;
+  font-weight: 500;
+  border: none;
+  border-radius: 0.3rem;
+  cursor: pointer;
+}
+
+.bottom > :last-child {
+  background-color: hsl(213, 96%, 18%);
+  color: hsl(0, 0%, 100%);
+  height: 2.6rem;
+  width: 6rem;
+  font: inherit;
+  font-size: 0.9rem;
+  font-weight: 500;
+  border: none;
+  border-radius: 0.3rem;
+  cursor: pointer;
+}
+
+@media (hover: hover) {
+  .container > button:hover,
+  .container > label:hover {
+    border: 1px solid hsl(243, 100%, 62%);
+  }
+  .bottom > :first-child:hover {
+    color: hsl(213, 96%, 18%);
+  }
+  .bottom > :last-child:hover {
+    opacity: 0.8;
+  }
+}

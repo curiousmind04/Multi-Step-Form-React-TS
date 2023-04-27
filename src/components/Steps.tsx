@@ -17,7 +17,13 @@ const Steps = () => {
       <div className={context?.step === 3 ? classes.current : classes.step}>
         <span>3</span>
       </div>
-      <div className={context?.step === 4 ? classes.current : classes.step}>
+      <div
+        className={
+          context?.step === 4 || context?.step === 5
+            ? classes.current
+            : classes.step
+        }
+      >
         <span>4</span>
       </div>
     </div>

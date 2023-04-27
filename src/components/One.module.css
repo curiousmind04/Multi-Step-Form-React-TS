@@ -18,9 +18,22 @@
   line-height: 1.4rem;
 }
 
+.message {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.message > span {
+  color: hsl(354, 84%, 57%);
+  font-size: 0.8rem;
+  font-weight: 700;
+}
+
 .container label {
   color: hsl(213, 96%, 18%);
   font-size: 0.8rem;
+  font-weight: 500;
 }
 
 .container input {
@@ -36,7 +49,6 @@
   margin-top: 0.2rem;
   margin-bottom: 1rem;
   outline: none;
-  /* outline: 1px solid hsl(243, 100%, 62%); */
   cursor: pointer;
 }
 
@@ -72,4 +84,13 @@
 
 .container .error {
   border: 1px solid hsl(354, 84%, 57%);
+}
+
+@media (hover: hover) {
+  .container input:hover {
+    border: 1px solid hsl(243, 100%, 62%);
+  }
+  .bottom button:hover {
+    opacity: 0.8;
+  }
 }

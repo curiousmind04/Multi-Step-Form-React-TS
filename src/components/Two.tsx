@@ -1,56 +1,20 @@
-import { FormEvent, useContext, useState } from "react";
+import { FormEvent, useContext } from "react";
 
 import Context from "../store/context";
 import classes from "./Two.module.css";
 
 const Two = () => {
   const context = useContext(Context);
-  const [payPeriod, setPayPeriod] = useState("monthly");
-  const [selection, setSelection] = useState<string>();
-
-  const payPeriodHandler = () => {
-    if (payPeriod === "monthly") {
-      setPayPeriod("yearly");
-    }
-    if (payPeriod === "yearly") {
-      setPayPeriod("monthly");
-    }
-  };
-
-  const selectionHandler = (selected: string) => {
-    setSelection(selected);
-
-    context?.resetTotal();
-
-    if (payPeriod === "monthly" && selection === "arcade") {
-      context?.totalHandler(9);
-    }
-    if (payPeriod === "yearly" && selection === "arcade") {
-      context?.totalHandler(90);
-    }
-    if (payPeriod === "monthly" && selection === "advanced") {
-      context?.totalHandler(12);
-    }
-    if (payPeriod === "yearly" && selection === "advanced") {
-      context?.totalHandler(120);
-    }
-    if (payPeriod === "monthly" && selection === "pro") {
-      context?.totalHandler(15);
-    }
-    if (payPeriod === "yearly" && selection === "pro") {
-      context?.totalHandler(150);
-    }
-  };
 
   const submitHandler = (event: FormEvent) => {
     event.preventDefault();
-    console.log(context?.total);
+    // console.log(payPeriod, selection);
 
-    if (context?.total === 0) {
+    if (!context?.plan) {
       return;
-    } else {
-      context?.nextStep();
     }
+
+    context?.nextStep();
   };
 
   return (
@@ -59,48 +23,61 @@ const Two = () => {
         <div className={classes.container}>
           <h1>Select your plan</h1>
           <p>You have the option of monthly or yearly billing.</p>
-          <button type="button" onClick={selectionHandler.bind(null, "arcade")}>
+          <button
+            type="button"
+            className={context?.plan === "Arcade" ? classes.chosen : ""}
+            onClick={context?.planHandler.bind(null, "Arcade")}
+          >
             <img src="/images/icon-arcade.svg" alt="arcade icon" />
             <div className={classes.details}>
               <h2>Arcade</h2>
-              <p>{payPeriod === "monthly" ? "$9/mo" : "$90/yr"}</p>
-              {payPeriod === "yearly" && (
+              <p>{context?.payPeriod === "Monthly" ? "$9/mo" : "$90/yr"}</p>
+              {context?.payPeriod === "Yearly" && (
                 <p className={classes.free}>2 months free</p>
               )}
             </div>
           </button>
           <button
             type="button"
-            onClick={selectionHandler.bind(null, "advanced")}
+            className={context?.plan === "Advanced" ? classes.chosen : ""}
+            onClick={context?.planHandler.bind(null, "Advanced")}
           >
             <img src="/images/icon-advanced.svg" alt="advanced icon" />
             <div className={classes.details}>
               <h2>Advanced</h2>
-              <p>{payPeriod === "monthly" ? "$12/mo" : "$120/yr"}</p>
-              {payPeriod === "yearly" && (
+              <p>{context?.payPeriod === "Monthly" ? "$12/mo" : "$120/yr"}</p>
+              {context?.payPeriod === "Yearly" && (
                 <p className={classes.free}>2 months free</p>
               )}
             </div>
           </button>
-          <button type="button" onClick={selectionHandler.bind(null, "pro")}>
+          <button
+            type="button"
+            className={context?.plan === "Pro" ? classes.chosen : ""}
+            onClick={context?.planHandler.bind(null, "Pro")}
+          >
             <img src="/images/icon-pro.svg" alt="pro icon" />
             <div className={classes.details}>
               <h2>Pro</h2>
-              <p>{payPeriod === "monthly" ? "$15/mo" : "$150/yr"}</p>
-              {payPeriod === "yearly" && (
+              <p>{context?.payPeriod === "Monthly" ? "$15/mo" : "$150/yr"}</p>
+              {context?.payPeriod === "Yearly" && (
                 <p className={classes.free}>2 months free</p>
               )}
             </div>
           </button>
           <div className={classes.options}>
-            <span className={payPeriod === "monthly" ? classes.chosen : ""}>
+            <span
+              className={context?.payPeriod === "Monthly" ? classes.chosen : ""}
+            >
               Monthly
             </span>
             <label className={classes.switch}>
-              <input type="checkbox" onClick={payPeriodHandler} />
+              <input type="checkbox" onClick={context?.payPeriodHandler} />
               <span className={classes.toggle}></span>
             </label>
-            <span className={payPeriod === "yearly" ? classes.chosen : ""}>
+            <span
+              className={context?.payPeriod === "Yearly" ? classes.chosen : ""}
+            >
               Yearly
             </span>
           </div>

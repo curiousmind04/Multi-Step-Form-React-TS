@@ -36,7 +36,7 @@
   cursor: pointer;
 }
 
-.container > button:focus {
+.container > .chosen {
   background-color: hsl(217, 100%, 97%);
   border: 1px solid hsl(243, 100%, 62%);
 }
@@ -169,5 +169,8 @@ input:checked + .toggle:before {
   }
   .bottom > :first-child:hover {
     color: hsl(213, 96%, 18%);
+  }
+  .bottom > :last-child:hover {
+    opacity: 0.8;
   }
 }

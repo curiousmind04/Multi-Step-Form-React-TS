@@ -1,0 +1,151 @@
+.container {
+  background-color: hsl(0, 0%, 100%);
+  margin: 0 1rem;
+  padding: 2rem 1.5rem 2rem 1.5rem;
+  border-radius: 0.6rem;
+  margin-bottom: 6rem;
+}
+
+.container h1 {
+  color: hsl(213, 96%, 18%);
+  margin-bottom: 0.8rem;
+}
+
+.container > p {
+  color: hsl(231, 11%, 63%);
+  font-weight: 500;
+  margin-bottom: 1.2rem;
+  line-height: 1.4rem;
+}
+
+.summary {
+  background-color: hsl(217, 100%, 97%);
+  padding: 1rem;
+  border-radius: 0.4rem;
+  margin-bottom: 1.5rem;
+}
+
+.top {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0.8rem;
+}
+
+.top > div {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 0.3rem;
+}
+
+.top h2 {
+  color: hsl(213, 96%, 18%);
+  font-size: 0.9rem;
+}
+
+.top button {
+  background-color: transparent;
+  color: hsl(231, 11%, 63%);
+  border: none;
+  font: inherit;
+  font-size: 0.9rem;
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.top > span {
+  color: hsl(213, 96%, 18%);
+  font-weight: 700;
+  font-size: 0.9rem;
+}
+
+.hr {
+  background-color: hsl(231, 22%, 77%);
+  width: 100%;
+  height: 1px;
+  border: none;
+}
+
+.addon {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 1rem;
+}
+
+.addon > span {
+  font-size: 0.9rem;
+}
+
+.addon > :first-child {
+  color: hsl(231, 11%, 63%);
+}
+
+.addon > :last-child {
+  color: hsl(213, 96%, 18%);
+  font-weight: 500;
+}
+
+.total {
+  padding-inline: 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.total > :first-child {
+  color: hsl(231, 11%, 63%);
+  font-size: 0.9rem;
+}
+
+.total > :last-child {
+  color: hsl(243, 100%, 62%);
+  font-weight: 700;
+}
+
+.bottom {
+  background-color: hsl(0, 0%, 100%);
+  width: 100%;
+  padding: 1rem;
+  display: flex;
+  justify-content: space-between;
+}
+
+.bottom > :first-child {
+  background-color: transparent;
+  color: hsl(231, 11%, 63%);
+  font: inherit;
+  font-size: 0.9rem;
+  font-weight: 500;
+  border: none;
+  border-radius: 0.3rem;
+  cursor: pointer;
+}
+
+.bottom > :last-child {
+  background-color: hsl(243, 100%, 62%);
+  color: hsl(0, 0%, 100%);
+  height: 2.6rem;
+  width: 6rem;
+  font: inherit;
+  font-size: 0.9rem;
+  font-weight: 500;
+  border: none;
+  border-radius: 0.3rem;
+  cursor: pointer;
+}
+
+@media (hover: hover) {
+  .top button:hover {
+    color: hsl(243, 100%, 62%);
+  }
+  .bottom > :first-child:hover {
+    color: hsl(213, 96%, 18%);
+  }
+  .bottom > :last-child:hover {
+    opacity: 0.8;
+  }
+}
