@@ -94,3 +94,22 @@
     opacity: 0.8;
   }
 }
+
+@media (max-width: 20.25rem) {
+  .container h1 {
+    font-size: 1.3rem;
+  }
+  .container p {
+    font-size: 0.8rem;
+  }
+  .message > span {
+    font-size: 0.6rem;
+  }
+  .container label {
+    font-size: 0.7rem;
+  }
+  .container input {
+    padding-left: 0.5rem;
+    font-size: 0.7rem;
+  }
+}

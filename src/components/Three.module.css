@@ -65,6 +65,7 @@
   border: 1px solid hsl(231, 22%, 77%);
   border-radius: 0.3rem;
   overflow: hidden;
+  flex-shrink: 0;
 }
 
 .checkmark input {
@@ -168,5 +169,28 @@
   }
   .bottom > :last-child:hover {
     opacity: 0.8;
+  }
+}
+
+@media (max-width: 22rem) {
+  .container h1 {
+    font-size: 1.3rem;
+  }
+  .container p {
+    font-size: 0.8rem;
+  }
+  .container > label {
+    align-items: flex-start;
+    gap: 0rem;
+  }
+  .left {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .details h2 {
+    font-size: 0.8rem;
+  }
+  .details p {
+    font-size: 0.7rem;
   }
 }

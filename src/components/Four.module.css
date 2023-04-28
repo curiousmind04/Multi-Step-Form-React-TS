@@ -149,3 +149,37 @@
     opacity: 0.8;
   }
 }
+
+@media (max-width: 20rem) {
+  .container {
+    padding-inline: 1rem;
+  }
+  .container h1 {
+    font-size: 1.3rem;
+  }
+  .container p {
+    font-size: 0.8rem;
+  }
+  .summary,
+  .total {
+    padding-inline: 0.5rem;
+  }
+  .top h2 {
+    font-size: 0.75rem;
+  }
+  .top button {
+    font-size: 0.75rem;
+  }
+  .top > span {
+    font-size: 0.75rem;
+  }
+  .addon > span {
+    font-size: 0.75rem;
+  }
+  .total > :first-child {
+    font-size: 0.75rem;
+  }
+  .total > :last-child {
+    font-size: 0.85rem;
+  }
+}

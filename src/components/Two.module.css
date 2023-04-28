@@ -174,3 +174,22 @@ input:checked + .toggle:before {
     opacity: 0.8;
   }
 }
+
+@media (max-width: 20.25rem) {
+  .container {
+    padding-inline: 1rem;
+  }
+  .container h1 {
+    font-size: 1.3rem;
+  }
+  .container p {
+    font-size: 0.8rem;
+  }
+  .options {
+    padding: 0.8rem;
+    gap: 0.8rem;
+  }
+  .options > span {
+    font-size: 0.7rem;
+  }
+}
