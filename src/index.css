@@ -40,6 +40,10 @@ body {
   min-height: 100vh;
 }
 
+section[hidden="true"] {
+  display: none;
+}
+
 @media (min-width: 38rem) {
   body {
     background-image: none;
