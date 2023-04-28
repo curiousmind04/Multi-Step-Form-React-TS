@@ -30,6 +30,10 @@
   margin: 0;
 }
 
+html {
+  min-height: 100vh;
+}
+
 body {
   background-image: url("/images/bg-sidebar-mobile.svg");
   background-repeat: no-repeat;
@@ -38,10 +42,6 @@ body {
   background-color: hsl(217, 100%, 97%);
   font: 400 1rem "Ubuntu", sans-serif;
   min-height: 100vh;
-}
-
-section[hidden="true"] {
-  display: none;
 }
 
 @media (min-width: 38rem) {
