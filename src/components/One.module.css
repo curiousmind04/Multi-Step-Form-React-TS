@@ -113,3 +113,43 @@
     font-size: 0.7rem;
   }
 }
+
+@media (min-width: 38rem) {
+  section {
+    min-width: 0;
+    flex-grow: 1;
+  }
+  .container {
+    padding: 3rem 0 1rem 0;
+    margin-bottom: 0;
+  }
+  .container h1 {
+    font-size: 2rem;
+  }
+  .container p {
+    margin-bottom: 2.2rem;
+  }
+  .container label {
+    font-size: 0.9rem;
+  }
+  .container input {
+    border-radius: 0.5rem;
+    height: 3rem;
+    padding-left: 1rem;
+    padding-right: 0.5rem;
+    margin-top: 0.5rem;
+    margin-bottom: 1rem;
+  }
+  .bottom button {
+    height: 3rem;
+    width: 8rem;
+    font-size: 1rem;
+    border-radius: 0.5rem;
+  }
+}
+
+@media (min-width: 46rem) {
+  .container {
+    margin-bottom: 3rem;
+  }
+}

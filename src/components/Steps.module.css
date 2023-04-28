@@ -30,3 +30,51 @@
   justify-content: center;
   align-items: center;
 }
+
+.title {
+  display: none;
+}
+
+@media (min-width: 38rem) {
+  .steps {
+    max-width: 17rem;
+    background-image: url("/images/bg-sidebar-desktop.svg");
+    background-repeat: no-repeat;
+    background-position: bottom right;
+    background-size: cover;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    padding: 2.5rem 2rem;
+    gap: 1.8rem;
+    border-radius: 0.6rem;
+    flex-shrink: 0;
+    flex-grow: 6;
+    min-width: 0;
+  }
+  .steps > div {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 1rem;
+  }
+  .title {
+    display: block;
+    display: flex;
+    flex-direction: column;
+    gap: 0.3rem;
+  }
+  .title p {
+    color: hsl(229, 24%, 87%);
+    text-transform: uppercase;
+  }
+  .title > :first-child {
+    font-size: 0.8rem;
+  }
+  .title > :last-child {
+    color: hsl(0, 0%, 100%);
+    font-size: 0.9rem;
+    font-weight: 700;
+  }
+}

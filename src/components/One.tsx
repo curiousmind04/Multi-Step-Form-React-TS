@@ -85,7 +85,7 @@ const One = () => {
             }}
           />
           <div className={classes.message}>
-            <label htmlFor="email">Email Adress</label>
+            <label htmlFor="email">Email Address</label>
             {!emailValidity && !emailInputRef.current?.value.trim().length && (
               <span>This field is required</span>
             )}

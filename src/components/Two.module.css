@@ -18,7 +18,7 @@
   line-height: 1.4rem;
 }
 
-.container > button {
+.container > .buttons button {
   background-color: transparent;
   width: 100%;
   padding: 1rem;
@@ -36,7 +36,7 @@
   cursor: pointer;
 }
 
-.container > .chosen {
+.container > .buttons .chosen {
   background-color: hsl(217, 100%, 97%);
   border: 1px solid hsl(243, 100%, 62%);
 }
@@ -164,7 +164,7 @@ input:checked + .toggle:before {
 }
 
 @media (hover: hover) {
-  .container > button:hover {
+  .container > .buttons button:hover {
     border: 1px solid hsl(243, 100%, 62%);
   }
   .bottom > :first-child:hover {
@@ -182,7 +182,7 @@ input:checked + .toggle:before {
   .container h1 {
     font-size: 1.3rem;
   }
-  .container p {
+  .container > p {
     font-size: 0.8rem;
   }
   .options {
@@ -191,5 +191,40 @@ input:checked + .toggle:before {
   }
   .options > span {
     font-size: 0.7rem;
+  }
+}
+
+@media (min-width: 50rem) {
+  .container {
+    padding: 3rem 0 1rem 0;
+    margin-bottom: 0;
+  }
+  .container h1 {
+    font-size: 2rem;
+  }
+  .container > p {
+    margin-bottom: 2.2rem;
+  }
+  .container > .buttons {
+    display: flex;
+    gap: 1rem;
+  }
+  .container > .buttons button {
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 2.5rem;
+    text-align: left;
+  }
+  .options {
+    margin-bottom: 4rem;
+  }
+  .bottom :first-child {
+    font-size: 1rem;
+  }
+  .bottom :last-child {
+    height: 3rem;
+    width: 8rem;
+    font-size: 1rem;
+    border-radius: 0.5rem;
   }
 }

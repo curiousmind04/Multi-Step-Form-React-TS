@@ -183,3 +183,46 @@
     font-size: 0.85rem;
   }
 }
+
+@media (min-width: 38rem) {
+  .container {
+    padding: 3rem 0 1rem 0;
+    margin-bottom: 0;
+  }
+  .container h1 {
+    font-size: 2rem;
+  }
+  .container > p {
+    margin-bottom: 2.2rem;
+  }
+  .summary {
+    padding: 1.5rem;
+  }
+  .top {
+    margin-bottom: 1.5rem;
+  }
+  .top h2 {
+    font-size: 1rem;
+  }
+  .top > span {
+    font-size: 1rem;
+  }
+  .total > :last-child {
+    font-size: 1.2rem;
+  }
+  .bottom :first-child {
+    font-size: 1rem;
+  }
+  .bottom :last-child {
+    height: 3rem;
+    width: 8rem;
+    font-size: 1rem;
+    border-radius: 0.5rem;
+  }
+}
+
+@media (min-width: 46rem) {
+  .container {
+    margin-bottom: 5rem;
+  }
+}

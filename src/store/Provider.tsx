@@ -7,7 +7,7 @@ type Props = {
 };
 
 const Provider = (props: Props) => {
-  const [step, setStep] = useState<number>(1);
+  const [step, setStep] = useState<number>(2);
   const [total, setTotal] = useState<number>(0);
   const [payPeriod, setPayPeriod] = useState<string>("Monthly");
   const [plan, setPlan] = useState<string>();
