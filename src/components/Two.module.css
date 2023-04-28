@@ -18,7 +18,7 @@
   line-height: 1.4rem;
 }
 
-.container > .buttons button {
+.container > .buttons > div {
   background-color: transparent;
   width: 100%;
   padding: 1rem;
@@ -36,7 +36,7 @@
   cursor: pointer;
 }
 
-.container > .buttons .chosen {
+.container > .buttons > .chosen {
   background-color: hsl(217, 100%, 97%);
   border: 1px solid hsl(243, 100%, 62%);
 }
@@ -164,7 +164,7 @@ input:checked + .toggle:before {
 }
 
 @media (hover: hover) {
-  .container > .buttons button:hover {
+  .container > .buttons > div:hover {
     border: 1px solid hsl(243, 100%, 62%);
   }
   .bottom > :first-child:hover {
@@ -209,7 +209,7 @@ input:checked + .toggle:before {
     display: flex;
     gap: 1rem;
   }
-  .container > .buttons button {
+  .container > .buttons > div {
     flex-direction: column;
     justify-content: space-between;
     gap: 2.5rem;

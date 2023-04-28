@@ -79,8 +79,7 @@ const Three = () => {
         <div className={classes.container}>
           <h1>Pick add-ons</h1>
           <p>Add-ons help enhance your gaming experience.</p>
-          <label
-            htmlFor="one"
+          <div
             className={
               context?.addons.includes("online service") ? classes.chosen : ""
             }
@@ -101,10 +100,9 @@ const Three = () => {
               </div>
             </div>
             <p>{context?.payPeriod === "Monthly" ? "+$1/mo" : "+$10/yr"}</p>
-          </label>
+          </div>
 
-          <label
-            htmlFor="two"
+          <div
             className={
               context?.addons.includes("larger storage") ? classes.chosen : ""
             }
@@ -125,10 +123,9 @@ const Three = () => {
               </div>
             </div>
             <p>{context?.payPeriod === "Monthly" ? "+$2/mo" : "+$20/yr"}</p>
-          </label>
+          </div>
 
-          <label
-            htmlFor="three"
+          <div
             className={
               context?.addons.includes("customizable profile")
                 ? classes.chosen
@@ -151,7 +148,7 @@ const Three = () => {
               </div>
             </div>
             <p>{context?.payPeriod === "Monthly" ? "+$2/mo" : "+$20/yr"}</p>
-          </label>
+          </div>
         </div>
         <div className={classes.bottom}>
           <button type="button" onClick={prevStepHandler}>

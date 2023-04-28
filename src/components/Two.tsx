@@ -24,8 +24,7 @@ const Two = () => {
           <h1>Select your plan</h1>
           <p>You have the option of monthly or yearly billing.</p>
           <div className={classes.buttons}>
-            <button
-              type="button"
+            <div
               className={context?.plan === "Arcade" ? classes.chosen : ""}
               onClick={context?.planHandler.bind(null, "Arcade")}
             >
@@ -37,9 +36,8 @@ const Two = () => {
                   <p className={classes.free}>2 months free</p>
                 )}
               </div>
-            </button>
-            <button
-              type="button"
+            </div>
+            <div
               className={context?.plan === "Advanced" ? classes.chosen : ""}
               onClick={context?.planHandler.bind(null, "Advanced")}
             >
@@ -51,9 +49,8 @@ const Two = () => {
                   <p className={classes.free}>2 months free</p>
                 )}
               </div>
-            </button>
-            <button
-              type="button"
+            </div>
+            <div
               className={context?.plan === "Pro" ? classes.chosen : ""}
               onClick={context?.planHandler.bind(null, "Pro")}
             >
@@ -65,7 +62,7 @@ const Two = () => {
                   <p className={classes.free}>2 months free</p>
                 )}
               </div>
-            </button>
+            </div>
           </div>
 
           <div className={classes.options}>

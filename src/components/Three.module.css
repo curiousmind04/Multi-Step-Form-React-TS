@@ -18,8 +18,7 @@
   line-height: 1.4rem;
 }
 
-.container > button,
-.container > label {
+.container > div {
   background-color: transparent;
   width: 100%;
   padding: 1rem;
@@ -66,6 +65,7 @@
   border-radius: 0.3rem;
   overflow: hidden;
   flex-shrink: 0;
+  /* pointer-events: none; */
 }
 
 .checkmark input {
@@ -73,7 +73,6 @@
   opacity: 0;
   height: 0;
   width: 0;
-  pointer-events: none;
 }
 
 .check {
@@ -120,8 +119,7 @@
   font-size: 0.75rem;
 }
 
-.container > button > p,
-.container > label > p {
+.container > div > p {
   color: hsl(243, 100%, 62%);
   font-size: 0.75rem;
   font-weight: 500;
@@ -160,8 +158,7 @@
 }
 
 @media (hover: hover) {
-  .container > button:hover,
-  .container > label:hover {
+  .container > div:hover {
     border: 1px solid hsl(243, 100%, 62%);
   }
   .bottom > :first-child:hover {
@@ -179,7 +176,7 @@
   .container p {
     font-size: 0.8rem;
   }
-  .container > label {
+  .container > div {
     align-items: flex-start;
     gap: 0rem;
   }
@@ -206,7 +203,7 @@
   .container > p {
     margin-bottom: 2.2rem;
   }
-  .container > label {
+  .container > div {
     padding: 1.3rem;
   }
   .details h2 {
@@ -215,7 +212,7 @@
   .details p {
     font-size: 0.9rem;
   }
-  .container > label > p {
+  .container > div > p {
     font-size: 0.9rem;
   }
   .bottom :first-child {

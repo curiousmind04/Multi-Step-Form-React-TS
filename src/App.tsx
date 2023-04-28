@@ -8,14 +8,14 @@ import Five from "./components/Five";
 
 const App = () => {
   return (
-    <div className={classes.container}>
+    <main className={classes.container}>
       <Steps />
       <One />
       <Two />
       <Three />
       <Four />
       <Five />
-    </div>
+    </main>
   );
 };
 

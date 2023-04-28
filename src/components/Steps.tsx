@@ -7,7 +7,7 @@ const Steps = () => {
   const context = useContext(Context);
 
   return (
-    <div className={classes.steps}>
+    <header className={classes.steps}>
       <div>
         <div className={context?.step === 1 ? classes.current : classes.step}>
           <span>1</span>
@@ -50,7 +50,7 @@ const Steps = () => {
           <p>Summary</p>
         </div>
       </div>
-    </div>
+    </header>
   );
 };
 
