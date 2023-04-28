@@ -30,10 +30,6 @@
   margin: 0;
 }
 
-html {
-  min-height: 100vh;
-}
-
 body {
   background-image: url("/images/bg-sidebar-mobile.svg");
   background-repeat: no-repeat;
